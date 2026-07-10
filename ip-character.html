@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>一叶心舟 - IP形象设计</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #f5f1eb;
+    font-family: 'Noto Sans SC', sans-serif;
+    color: #3d3226;
+    min-height: 100vh;
+  }
+
+  .page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 24px;
+  }
+
+  /* ── Header ── */
+  .header {
+    text-align: center;
+    margin-bottom: 64px;
+  }
+  .header .tag {
+    display: inline-block;
+    font-size: 13px;
+    letter-spacing: 0.2em;
+    color: #8b7355;
+    border: 1px solid #c4b5a0;
+    border-radius: 100px;
+    padding: 6px 20px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+  .header h1 {
+    font-size: clamp(28px, 5vw, 44px);
+    font-weight: 300;
+    letter-spacing: 0.06em;
+    color: #2c2416;
+    margin-bottom: 8px;
+  }
+  .header h1 span {
+    font-weight: 700;
+    color: #6b8f89;
+  }
+  .header .sub {
+    font-size: 15px;
+    color: #9b8c7c;
+    letter-spacing: 0.05em;
+  }
+
+  /* ── Three-View Section ── */
+  .three-view {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    margin-bottom: 72px;
+  }
+
+  @media (max-width: 768px) {
+    .three-view {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+  }
+
+  .view-card {
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 36px 20px 28px;
+    text-align: center;
+    box-shadow: 0 4px 40px rgba(60, 40, 20, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .view-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 48px rgba(60, 40, 20, 0.10);
+  }
+  .view-card .view-label {
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    color: #8b7355;
+    margin-bottom: 24px;
+    text-transform: uppercase;
+  }
+  .view-card svg {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* ── Design Notes ── */
+  .notes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 64px;
+  }
+  @media (max-width: 768px) {
+    .notes { grid-template-columns: 1fr; }
+  }
+
+  .note {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 28px 24px;
+    box-shadow: 0 4px 40px rgba(60, 40, 20, 0.05);
+    border-left: 4px solid #8b9a8e;
+  }
+  .note h3 {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #4a5a54;
+  }
+  .note p {
+    font-size: 13.5px;
+    line-height: 1.7;
+    color: #7a6e60;
+  }
+
+  /* ── Color Palette ── */
+  .palette-section {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .palette-section h2 {
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    margin-bottom: 20px;
+    color: #5a4e3c;
+  }
+  .palette {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .swatch {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    transition: transform 0.2s;
+  }
+  .swatch:hover { transform: scale(1.1); }
+  .swatch-wrap {
+    text-align: center;
+    font-size: 11px;
+    color: #9b8c7c;
+  }
+  .swatch-wrap .hex {
+    margin-top: 6px;
+    font-weight: 500;
+  }
+
+  /* ── Footer ── */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #bfb3a2;
+    padding-top: 48px;
+    border-top: 1px solid #e0d8cd;
+    letter-spacing: 0.05em;
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- ── Header ── -->
+  <div class="header">
+    <div class="tag">IP Character · Brand Mascot</div>
+    <h1>一叶<span>心</span>舟</h1>
+    <p class="sub">船过疲惫，与海风相拥 &nbsp;·&nbsp; Boat-House Mascot Design</p>
+  </div>
+
+  <!-- ── 三视图 ── -->
+  <div class="three-view">
+
+    <!-- 正面 -->
+    <div class="view-card">
+      <div class="view-label">正面视图 · Front</div>
+      <svg viewBox="0 0 280 320" xmlns="http://www.w3.org/2000/svg">
+        <!-- Shadow -->
+        <ellipse cx="140" cy="298" rx="85" ry="10" fill="#e0d8d0" opacity="0.7"/>
+
+        <!-- Boat body / base -->
+        <path d="M55 240 Q55 270 80 278 L200 278 Q225 270 225 240 Z"
+              fill="#8b9a8e" stroke="#6b7d72" stroke-width="2"/>
+        <!-- Boat body top highlight -->
+        <path d="M55 240 Q140 228 225 240"
+              fill="none" stroke="#a3b5a7" stroke-width="3" stroke-linecap="round"/>
+
+        <!-- House top (gentle roof shape) -->
+        <path d="M72 245 L72 200 Q140 165 208 200 L208 245"
+              fill="#f2e8d5" stroke="#d4c8b0" stroke-width="2"/>
+
+        <!-- Roof top (warm accent) -->
+        <path d="M60 203 Q140 160 220 203"
+              fill="#c4956a" stroke="#b07e55" stroke-width="2"/>
+        <!-- Roof ridge -->
+        <line x1="140" y1="166" x2="140" y2="178" stroke="#b07e55" stroke-width="3"
+              stroke-linecap="round"/>
+
+        <!-- Windows (eyes of the house) -->
+        <circle cx="115" cy="218" r="16" fill="#fdfaf3" stroke="#c4b5a0" stroke-width="2"/>
+        <circle cx="165" cy="218" r="16" fill="#fdfaf3" stroke="#c4b5a0" stroke-width="2"/>
+        <!-- Window panes (cross) -->
+        <line x1="115" y1="202" x2="115" y2="234" stroke="#d9cdba" stroke-width="1.2"/>
+        <line x1="99"  y1="218" x2="131" y2="218" stroke="#d9cdba" stroke-width="1.2"/>
+        <line x1="165" y1="202" x2="165" y2="234" stroke="#d9cdba" stroke-width="1.2"/>
+        <line x1="149" y1="218" x2="181" y2="218" stroke="#d9cdba" stroke-width="1.2"/>
+
+        <!-- Warm glow in windows -->
+        <circle cx="115" cy="218" r="8" fill="#fce4b8" opacity="0.4"/>
+        <circle cx="165" cy="218" r="8" fill="#fce4b8" opacity="0.4"/>
+
+        <!-- Door (centered, welcoming) -->
+        <rect x="122" y="230" width="36" height="44" rx="18" ry="18"
+              fill="#6b8f89" stroke="#557770" stroke-width="2"/>
+        <!-- Door handle -->
+        <circle cx="148" cy="252" r="3" fill="#f2e8d5"/>
+
+        <!-- Chimney -->
+        <rect x="152" y="155" width="18" height="28" rx="4"
+              fill="#c4956a" stroke="#b07e55" stroke-width="1.5"/>
+
+        <!-- Small porthole on hull -->
+        <circle cx="90" cy="260" r="9" fill="#fdfaf3" stroke="#6b7d72" stroke-width="1.5"/>
+        <circle cx="190" cy="260" r="9" fill="#fdfaf3" stroke="#6b7d72" stroke-width="1.5"/>
+
+        <!-- Water ripples -->
+        <path d="M70 284 Q110 278 150 284 Q190 290 210 284"
+              fill="none" stroke="#bcc9c0" stroke-width="1.8" stroke-linecap="round"/>
+        <path d="M60 290 Q110 284 160 290 Q190 294 220 290"
+              fill="none" stroke="#bcc9c0" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+
+        <!-- Gentle smoke from chimney -->
+        <path d="M161 152 Q168 142 162 134 Q156 126 162 118"
+              fill="none" stroke="#d4cfc4" stroke-width="2.5" stroke-linecap="round" opacity="0.6"/>
+      </svg>
+    </div>
+
+    <!-- 侧面 -->
+    <div class="view-card">
+      <div class="view-label">侧面视图 · Side</div>
+      <svg viewBox="0 0 280 320" xmlns="http://www.w3.org/2000/svg">
+        <!-- Shadow -->
+        <ellipse cx="140" cy="298" rx="90" ry="10" fill="#e0d8d0" opacity="0.7"/>
+
+        <!-- Boat hull - longer side profile -->
+        <path d="M30 260 Q30 282 60 286 L230 286 Q260 282 260 260 L250 240 L40 240 Z"
+              fill="#8b9a8e" stroke="#6b7d72" stroke-width="2"/>
+        <!-- Hull highlight -->
+        <path d="M40 242 L250 242"
+              fill="none" stroke="#a3b5a7" stroke-width="2.8" stroke-linecap="round"/>
+
+        <!-- House body (side view - slightly longer) -->
+        <rect x="55" y="180" width="160" height="65" rx="6"
+              fill="#f2e8d5" stroke="#d4c8b0" stroke-width="2"/>
+
+        <!-- Roof (side view - pitched) -->
+        <path d="M45 185 L135 148 L225 185"
+              fill="#c4956a" stroke="#b07e55" stroke-width="2"/>
+
+        <!-- Side window -->
+        <rect x="80" y="198" width="28" height="28" rx="6"
+              fill="#fdfaf3" stroke="#c4b5a0" stroke-width="2"/>
+        <line x1="94" y1="198" x2="94" y2="226" stroke="#d9cdba" stroke-width="1.2"/>
+        <line x1="80" y1="212" x2="108" y2="212" stroke="#d9cdba" stroke-width="1.2"/>
+        <!-- Warm glow -->
+        <rect x="84" y="202" width="20" height="20" rx="4" fill="#fce4b8" opacity="0.35"/>
+
+        <!-- Door zone -->
+        <rect x="130" y="205" width="24" height="40" rx="12"
+              fill="#6b8f89" stroke="#557770" stroke-width="1.5"/>
+
+        <!-- Small round window near door -->
+        <circle cx="178" cy="212" r="10" fill="#fdfaf3" stroke="#c4b5a0" stroke-width="1.5"/>
+        <circle cx="178" cy="212" r="4" fill="#fce4b8" opacity="0.4"/>
+
+        <!-- Chimney -->
+        <rect x="150" y="133" width="16" height="26" rx="4"
+              fill="#c4956a" stroke="#b07e55" stroke-width="1.5"/>
+
+        <!-- Hull plank lines -->
+        <line x1="48" y1="254" x2="248" y2="254" stroke="#7d8a80" stroke-width="0.8"
+              opacity="0.4"/>
+        <line x1="44" y1="264" x2="252" y2="264" stroke="#7d8a80" stroke-width="0.8"
+              opacity="0.4"/>
+
+        <!-- Water ripples -->
+        <path d="M50 290 Q100 283 150 290 Q200 296 240 290"
+              fill="none" stroke="#bcc9c0" stroke-width="1.8" stroke-linecap="round"/>
+        <path d="M40 296 Q100 289 160 296 Q200 300 250 296"
+              fill="none" stroke="#bcc9c0" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+
+        <!-- Smoke -->
+        <path d="M158 128 Q166 118 160 108 Q154 98 162 88"
+              fill="none" stroke="#d4cfc4" stroke-width="2.5" stroke-linecap="round" opacity="0.5"/>
+      </svg>
+    </div>
+
+    <!-- 背面 -->
+    <div class="view-card">
+      <div class="view-label">背面视图 · Back</div>
+      <svg viewBox="0 0 280 320" xmlns="http://www.w3.org/2000/svg">
+        <!-- Shadow -->
+        <ellipse cx="140" cy="298" rx="85" ry="10" fill="#e0d8d0" opacity="0.7"/>
+
+        <!-- Boat hull -->
+        <path d="M55 240 Q55 270 80 278 L200 278 Q225 270 225 240 Z"
+              fill="#8b9a8e" stroke="#6b7d72" stroke-width="2"/>
+        <path d="M55 240 Q140 228 225 240"
+              fill="none" stroke="#a3b5a7" stroke-width="3" stroke-linecap="round"/>
+
+        <!-- House body -->
+        <path d="M72 245 L72 200 Q140 165 208 200 L208 245"
+              fill="#f2e8d5" stroke="#d4c8b0" stroke-width="2"/>
+
+        <!-- Roof -->
+        <path d="M60 203 Q140 160 220 203"
+              fill="#c4956a" stroke="#b07e55" stroke-width="2"/>
+
+        <!-- Chimney (back) -->
+        <rect x="152" y="155" width="18" height="28" rx="4"
+              fill="#c4956a" stroke="#b07e55" stroke-width="1.5"/>
+
+        <!-- House back detail: subtle seam line -->
+        <line x1="140" y1="170" x2="140" y2="245" stroke="#e8dfcd" stroke-width="1.5"/>
+
+        <!-- Back window (small, high) -->
+        <circle cx="140" cy="205" r="12" fill="#fdfaf3" stroke="#c4b5a0" stroke-width="2"/>
+        <line x1="140" y1="193" x2="140" y2="217" stroke="#d9cdba" stroke-width="1.2"/>
+        <line x1="128" y1="205" x2="152" y2="205" stroke="#d9cdba" stroke-width="1.2"/>
+        <circle cx="140" cy="205" r="5" fill="#fce4b8" opacity="0.35"/>
+
+        <!-- Back portholes -->
+        <circle cx="90" cy="260" r="9" fill="#fdfaf3" stroke="#6b7d72" stroke-width="1.5"/>
+        <circle cx="190" cy="260" r="9" fill="#fdfaf3" stroke="#6b7d72" stroke-width="1.5"/>
+
+        <!-- Water -->
+        <path d="M70 284 Q110 278 150 284 Q190 290 210 284"
+              fill="none" stroke="#bcc9c0" stroke-width="1.8" stroke-linecap="round"/>
+        <path d="M60 290 Q110 284 160 290 Q190 294 220 290"
+              fill="none" stroke="#bcc9c0" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+
+        <!-- Smoke -->
+        <path d="M161 152 Q168 142 162 134 Q156 126 162 118"
+              fill="none" stroke="#d4cfc4" stroke-width="2.5" stroke-linecap="round" opacity="0.6"/>
+      </svg>
+    </div>
+  </div>
+
+  <!-- ── 设计说明 ── -->
+  <div class="notes">
+    <div class="note">
+      <h3>🏠 船屋概念</h3>
+      <p>将小船与温暖小屋融合为一体——木质船身作为地基，小屋架于船身之上，承载"以船为家，漂泊中亦有归处"的民宿理念。</p>
+    </div>
+    <div class="note">
+      <h3>🌿 简约自然</h3>
+      <p>去除帆、泳圈等繁复元素，用极简几何线条勾勒船屋轮廓。温柔的大地色系与海岸调，传递宁静安然的度假氛围。</p>
+    </div>
+    <div class="note">
+      <h3>💛 亲切治愈</h3>
+      <p>圆润的小窗户像两只眼睛，透出暖黄灯光。居中圆弧门敞开欢迎姿态，让客人感受到"一叶心舟"的温度。</p>
+    </div>
+  </div>
+
+  <!-- ── 色彩规范 ── -->
+  <div class="palette-section">
+    <h2>品牌色板 · Color Palette</h2>
+    <div class="palette">
+      <div class="swatch-wrap">
+        <div class="swatch" style="background:#8b9a8e;"></div>
+        <div class="hex">#8b9a8e</div>
+        <div style="font-size:10px;margin-top:2px;">船身 · 海雾灰绿</div>
+      </div>
+      <div class="swatch-wrap">
+        <div class="swatch" style="background:#f2e8d5;"></div>
+        <div class="hex">#f2e8d5</div>
+        <div style="font-size:10px;margin-top:2px;">屋体 · 暖米白</div>
+      </div>
+      <div class="swatch-wrap">
+        <div class="swatch" style="background:#c4956a;"></div>
+        <div class="hex">#c4956a</div>
+        <div style="font-size:10px;margin-top:2px;">屋顶 · 原木陶土</div>
+      </div>
+      <div class="swatch-wrap">
+        <div class="swatch" style="background:#6b8f89;"></div>
+        <div class="hex">#6b8f89</div>
+        <div style="font-size:10px;margin-top:2px;">门 · 深海松绿</div>
+      </div>
+      <div class="swatch-wrap">
+        <div class="swatch" style="background:#fce4b8;"></div>
+        <div class="hex">#fce4b8</div>
+        <div style="font-size:10px;margin-top:2px;">灯光 · 暖黄光晕</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    一叶心舟 &nbsp;·&nbsp; IP Character Design &nbsp;·&nbsp; 船屋民宿品牌形象
+  </div>
+</div>
+</body>
+</html>
